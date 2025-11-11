@@ -10,7 +10,9 @@ while True:
     except ValueError:
         print("Моля, въведи валидни числа за ден и месец.")
         
-    repeat = input("Искаш ли да въведеш нова дата? (да/не): ").strip().lower()
-    if repeat != "да":
+   repeat = input("Искаш ли да въведеш нова дата? (да или не): ").strip().lower()
+    if repeat in ["да", "yes", "da"] :
+        print("Продължаваме играта...")
+    elif repeat in ["не", "no", "ne"]:
         print("Благодаря! До скоро!")
         break
